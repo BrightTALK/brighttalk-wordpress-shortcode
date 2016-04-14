@@ -1,14 +1,14 @@
 <?php
 /**
  * @link              http://example.com
- * @since             1.0.0
+ * @since             0.0.1
  * @package           BrightTALK-shortcode 
  *
  * @wordpress-plugin
  * Plugin Name:       BrightTALK Short Code 
  * Plugin URI:        https://developer.brighttalk.com/plugins/wordpress/brighttalk-short-code/ 
  * Description:       Adds the BrightTALK shortcode allowing BrightTALK players to be used in Wordpress 
- * Version:           1.0.0
+ * Version:           0.0.1
  * Author:            BrightTALK 
  * Author URI:        http://developer.brighttalk.com/
  * License:           GPL-2.0+
