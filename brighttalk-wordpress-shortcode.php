@@ -1,19 +1,15 @@
 <?php
 /**
- * @link              http://example.com
- * @since             0.0.1
- * @package           BrightTALK-shortcode 
- *
  * @wordpress-plugin
- * Plugin Name:       BrightTALK Short Code 
- * Plugin URI:        https://developer.brighttalk.com/plugins/wordpress/brighttalk-short-code/ 
- * Description:       Adds the BrightTALK shortcode allowing BrightTALK players to be used in Wordpress 
- * Version:           0.0.1
- * Author:            BrightTALK 
+ * Plugin Name:       BrightTALK Wordpress Short Code 
+ * Plugin URI:        https://developer.brighttalk.com/integration/wordpress/brighttalk-short-code/brighttalk_wordpress_shortcode.zip
+ * Description:       Add the BrightTALK media player shortcode to to simplify embedding BrightTALK content into your site.
+ * Version:           0.0.2
+ * Author:            Dorian Logan 
  * Author URI:        http://developer.brighttalk.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       plugin-name
+ * Text Domain:       brighttalk-wordpress-shortcode 
  */
 
 // If this file is called directly, abort.
@@ -23,15 +19,13 @@ if ( ! defined( 'WPINC' ) ) {
 
 function brighttalk_wordpress_shortcode($atts, $content=null){
   $brighttalk_shortcode_atts = shortcode_atts( array(
-    'title' => 'BrightTALK Integration Channel',
-    'description' => 'Tips and best practice regarding integrating the BrightTALK platform with your website',
-    'language' => 'en-US',
-    'channelid' => '1293',
+    'channelid' => '1166',
+    'commid' => '0',
   ), $atts );
 
-  $embed = '<h1>ChannelId %d</h1><script src="https://www.brighttalk.com/clients/js/player-embed/player-embed.js" class="jsBrightTALKEmbed">{ "channelId" : %d, "displayMode" : "channelList", "height" : "2000px", "width" : "100%%", "environment" : "prod", "language" : "en-US",  "noFlash" : false, "track" : "", "inlineContent" : true }</script>';
+  $embed = '<script src="https://www.brighttalk.com/clients/js/player-embed/player-embed.js" class="jsBrightTALKEmbed">{ "channelId" : %d, "commId" : %d, "displayMode" : "channelList", "height" : "2000px", "width" : "100%%", "environment" : "prod", "language" : "en-US",  "noFlash" : false, "track" : "", "inlineContent" : true }</script>';
 
-  $op = sprintf($embed, $brighttalk_shortcode_atts['channelid'], $brighttalk_shortcode_atts['channelid']);
+  $op = sprintf($embed, $brighttalk_shortcode_atts['channelid'], $brighttalk_shortcode_atts['commid']);
   return $op;
 }
 
