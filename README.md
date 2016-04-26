@@ -1,3 +1,2 @@
-
-= BrightTALK WordPress Shortcode =
+# BrightTALK WordPress Shortcode #
 
