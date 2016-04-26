@@ -1,4 +1,4 @@
-# brighttalk-wp-shortcode
+=== brighttalk-wp-shortcode ===
 
 WordPress shortcode support for BrightTALK channel 
 
