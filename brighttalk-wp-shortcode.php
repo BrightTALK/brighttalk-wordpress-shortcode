@@ -1,14 +1,14 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name:       BrightTALK Wordpress Shortcode 
- * Plugin URI:        https://github.com/BrightTALK/brighttalk-wp-shortcode/archive/master.zip 
+ * Plugin Name:       BrightTALK WordPress Shortcode 
+ * Plugin URI:        https://github.com/BrightTALK/brighttalk-wp-shortcode/ 
  * Description:       Add the BrightTALK media player shortcode to to simplify embedding BrightTALK content into your site.
- * Version:           0.0.2
+ * Version:           1.0.0
  * Author:            Dorian Logan 
  * Author URI:        http://developer.brighttalk.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPLv2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       brighttalk-wp-shortcode 
  */
 
@@ -29,7 +29,7 @@ function brighttalk_wp_shortcode($atts, $content=null){
   return $op;
 }
 
-add_shortcode('BrightTALK', 'brighttalk_wordpress_shortcode');
+add_shortcode('BrightTALK', 'brighttalk_wp_shortcode');
 
 
 function activate_brighttalk_wp_shortcode() {
